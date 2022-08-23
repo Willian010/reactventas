@@ -1,17 +1,27 @@
-import logo from './logo.svg';
+
 import './App.css';
-import Alert from './Components/Alert/Alert';
+import Alert from './Components/Alert';
+import NavBar from './Components/NavBar';
+import CardWidget from './Components/CardWidget'; 
+import ItemListContainer from './Components/ItemListContainer';
 
 
-function App() {
+function App(){
   return (
+    
     <div className="App">
-      <header className="App-header">
-        
+      <header className="App-header">  
+
+      
+       <NavBar></NavBar>
+       <CardWidget></CardWidget>
+       <Alert titulo="Servicio" tiempo="1777" > </Alert> 
+       <ItemListContainer></ItemListContainer>
+
        
-       <Alert></Alert>
       </header>
     </div>
+  
   );
 }
 
