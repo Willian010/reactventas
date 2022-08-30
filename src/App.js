@@ -5,6 +5,8 @@ import NavBar from './Components/NavBar';
 import CardWidget from './Components/CardWidget'; 
 import ItemListContainer from './Components/ItemListContainer';
 import ItemCount from './Components/ItemCount';
+import  ItemList  from './Components/ItemList/ItemList';
+
 
 function App(){
 
@@ -19,8 +21,7 @@ function App(){
    <div className="App">
     
       <header className="App-header">  
-
-
+       <ItemList></ItemList>
        <NavBar></NavBar>
        <CardWidget></CardWidget>
        <Alert titulo="Servicio" tiempo="1777" > </Alert> 
