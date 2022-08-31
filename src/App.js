@@ -5,7 +5,7 @@ import NavBar from './Components/NavBar';
 import CardWidget from './Components/CardWidget'; 
 import ItemListContainer from './Components/ItemListContainer';
 import ItemCount from './Components/ItemCount';
-import  ItemList  from './Components/ItemList/ItemList';
+import  {ItemList}  from './Components/ItemList/ItemList';
 
 
 function App(){
