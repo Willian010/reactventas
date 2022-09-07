@@ -1,0 +1,19 @@
+.cardImg{
+    width: 50px;
+    border-radius: 50%;
+    background-color: yellow;
+
+}
+.card{
+    background-color: black;
+    background: black;
+}
+.parrafo{
+    background-color: white;
+}
+.bu{
+    background: yellow;
+}
+p{
+    color: yellow;
+}

@@ -5,7 +5,8 @@ class CardWidget extends Component  {
     render(){
         return(
              <div>
-             <img src='https://cdn-icons-png.flaticon.com/512/107/107831.png' alt='♥' />
+            <button><img src= "https://cdn-icons-png.flaticon.com/512/107/107831.png" alt='♥' /></button>
+            <span></span>
              </div>
         );
         }

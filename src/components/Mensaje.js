@@ -2,6 +2,6 @@ import React from 'react'
 
 export const Mensaje = () => {
   return (
-    <div>Hola</div>
+    <div>Nuestros productos</div>
   )
 }

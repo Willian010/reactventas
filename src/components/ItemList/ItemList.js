@@ -1,32 +1,33 @@
-import React, { useEffect, useState } from 'react'
-import { Mensaje } from '../Mensaje/Mensaje'
+ import React, { useEffect, useState } from 'react'
+import { Mensaje } from '../Mensaje'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
-
-
+import  servidortorre1  from '../Data/servidortorre1.png'
+import servidorrack1 from '../Data/servidorrack1.png'
 
 
     const arregloServidores = [
         {
-            nombre: 'HPE ProLiant ML350 Gen10 Xeon 4210R (Torre)',
+            nombre: 'Torre',
             poder:'1 (uno) Intel® Xeon® 4210R (2.4GHz / 10-core / 100W) (hasta 2)',
-            imagen: 'https://numir.com.ar/wp-content/uploads/2022/04/P19116-001-HPE-ProLiant-ML110-Gen10-Torre.png'
+            imagen: servidortorre1
         },
         {
-            nombre: 'HPE ProLiant DL20 Gen10 Plus (Rack)',
+            nombre: 'Rack',
             poder:"Intel® Xeon® E-2314 (4-Core, 2.8 GHz)",
-            imagen: 'https://numir.com.ar/wp-content/uploads/2022/04/P17080-B21-HPE-ProLiant-DL20-Gen10-Rack.png'
+            imagen:  servidorrack1
         },
     
     ]
 
-export const Landing = () => {
-    const [servidor, setServidores] = useState([]);
+export const ItemList = () => {
+    const [servidores, setServidores] = useState([]);
 
     const obtenerServidores = ()=>{
         return new Promise((resolve, reject)=>{
             setTimeout(() => {
                 resolve(arregloServidores)
             }, 3000);
+            
         })
     }
 
@@ -46,12 +47,21 @@ export const Landing = () => {
     return (
         <div className='listContainer'>
             <Mensaje/>
-            <div className='cardsContainer'>
+            <div className='cardsContainer'>{
+                servidores.length>0 &&
+                <>
+                <Tarjeta servidor={servidores[0]}/>
+                <Tarjeta servidor={servidores[1]}/>
+                </>
+            }
               
+                
+            
                 {
-                   servidor.map((servidor)=>{
+                   servidores.map((servidor)=>{
                         return(
                             <Tarjeta servidor={servidor}/>
+                            
                         )
                     })
                 }
@@ -59,3 +69,4 @@ export const Landing = () => {
         </div>
     )
 }
+export default ItemList
