@@ -1,12 +1,19 @@
 import React from 'react'
-//import ItemDetalle from './Components/ItemDetalleContainer/ItemDetalle';
+import ItemCount from '../Components/ItemCount';
 
 
 const ItemDetalleContainer = () => {
+    const onAdd = (count) =>{
+
+
+    }
     return (
-        <div>
-            
-        </div>
+       
+    
+    <ItemCount  initial={1} stock={10}  onAdd={onAdd}/>
+    
     )
+
 }
+
 export default ItemDetalleContainer;

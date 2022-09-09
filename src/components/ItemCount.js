@@ -6,7 +6,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
  
  
- export const Contador  = ({stock,  initial , agregarProducto}) => {
+ export const Contador  = ({stock,  initial , agregarProducto, onAdd}) => {
     // cuando una propiedad o una variable de estado cambie el componente vuelve a renderizarce.//
     const [contador, setContador,]= useState(initial);
     
@@ -28,9 +28,11 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 <Button variant="secondary" >{contador}</Button>
 <Button variant="secondary" onClick={decrementar}>-</Button>
 </ButtonGroup>
-<button className="Agregar" onClick={()=>(agregarProducto(contador))}>Agregar al carro</button>
+<button className="Agregar" disabled={stock ===0} onClick={onAdd}>Agregar al carro</button>
 </div>
     )
 
  }
 export default Contador;
+
+//onClick={()=>(agregarProducto(contador))}
