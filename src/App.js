@@ -29,6 +29,7 @@ function App(){
         <Route path='/' element={<ItemList/>}/>
         <Route path='/Carrito' element={<CardWidget/>}/>
         <Route path='/promo' element={<Alert/>}/>
+        <Route path='/card' element={<CardContext/>}/>
        </Routes>
        <CardWidget></CardWidget>
        <Alert titulo="Servicio" tiempo="1777" > </Alert> 
