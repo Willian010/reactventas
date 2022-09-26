@@ -28,7 +28,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 <Button variant="secondary" >{contador}</Button>
 <Button variant="secondary" onClick={decrementar}>-</Button>
 </ButtonGroup>
-<button className="Agregar" disabled={stock ===0} onClick={onAdd}>Agregar al carro</button>
+<button className="Agregar" disabled={stock ===0} onClick={  () =>onAdd(count)}>Agregar al carro</button>
 </div>
     )
 

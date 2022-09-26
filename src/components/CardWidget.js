@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 
 
-class CardWidget extends Component  {
-    render(){
+const0() CardWidget   {
+
         return(
              <div>
             <button><img src= "https://cdn-icons-png.flaticon.com/512/107/107831.png" alt='♥' /></button>
