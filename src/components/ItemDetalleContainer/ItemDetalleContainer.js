@@ -15,14 +15,14 @@ export const ItemDetalleContainer = () => {
 
 }
 
-export default ItemDetalleContainer;*/s
+export default ItemDetalleContainer;*/
 
 
-import { useState, useEffect } from "react";
+/*import { useState, useEffect } from "react";
 //import './ItemDetailContainer.css';
 import { arregloProductos } from "../../baseDatos/baseDatos";
 import { ItemDetalle } from "../ItemDetalle/ItemDetalle";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom"; 
 
 export const ItemDetailContainer = ()=>{
     const {productId} = useParams();
@@ -44,6 +44,42 @@ export const ItemDetailContainer = ()=>{
         getProducto();
     },[productId])
 
+    return(
+        <div className="item-detail-container">
+            <p style={{width:"100%", color: "white"}}>item detail container</p>
+            <ItemDetail item={item}/>
+        </div>
+    )
+}*/
+import { useState, useEffect } from "react";
+import './ItemDetailContainer.css';
+import { arregloProductos } from "../../baseDatos/baseDatos";
+import { ItemDetail } from "../ItemDetail/ItemDetail";
+import { useParams } from "react-router-dom";
+
+export const ItemDetailContainer = ()=>{
+    const {productId} = useParams();
+    console.log("productId",productId);
+
+    const [item, setItem] = useState({});
+
+    const getItem = (id)=>{
+        return new Promise((resolve, reject)=>{
+            const product = arregloProductos.find(item=>item.id === parseInt(id));
+            resolve(product)
+        })
+    }
+
+    useEffect(()=>{
+        const getProducto = async()=>{
+            const producto = await getItem(productId);
+            console.log('producto', producto)
+            setItem(producto);
+        }
+        getProducto();
+    },[productId])
+
+    console.log('item:', item)
     return(
         <div className="item-detail-container">
             <p style={{width:"100%", color: "white"}}>item detail container</p>

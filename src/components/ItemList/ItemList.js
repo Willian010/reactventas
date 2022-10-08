@@ -1,4 +1,4 @@
- import React, { useEffect, useState } from 'react'
+ /* React, { useEffect, useState } from 'react'
 import { Mensaje } from '../Mensaje'
 import { Tarjeta } from '../Tarjeta/Tarjeta'
 import  servidortorre1  from '../Data/servidortorre1.png'
@@ -11,12 +11,7 @@ import servidorrack1 from '../Data/servidorrack1.png'
             poder:'1 (uno) Intel® Xeon® 4210R (2.4GHz / 10-core / 100W) (hasta 2)',
             imagen: servidortorre1
         },
-        {
-            nombre: 'Rack',
-            poder:"Intel® Xeon® E-2314 (4-Core, 2.8 GHz)",
-            imagen:  servidorrack1
-        },
-    
+      
     ]
 
 export const ItemList = () => {
@@ -69,4 +64,23 @@ export const ItemList = () => {
         </div>
     )
 }
-export default ItemList
+export default ItemList*/
+import { Item } from "../Item/Item"
+import './ItemList.css';
+//import {Link} from 'react-router-dom';
+
+export const ItemList = ({items})=>{
+
+    return(
+        <div className="estilos-listado">
+            <div style={{width:"100%"}}>item list</div>
+            {
+                items.map(producto=>(
+                    // <Link key={producto.id} to={`/item/${producto.id}`}>
+                        <Item item={producto}/>
+                    // </Link>
+                ))
+            }
+        </div>
+    )
+}
